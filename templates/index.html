@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- REMEMBER TO NOT NAME THE CSS FILE THE SAME AS THE APP.PY, IT WON'T WORK!  -->
+    <link rel="stylesheet" href="/static/boggle.css">
+    <title>Test Site</title>
+</head>
+
+<body>
+    <section>
+        <table class="board">
+            <tbody>
+                {% for row in board %}
+                <tr>
+                    {% for cell in row %}
+                    <td>{{ cell }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h2>Enter your guess</h3>
+            <form method="POST" class="submit-word">
+                <input name="word" class="word" autofocus>
+                <button>Enter</button>
+            </form>
+
+
+
+    </section>
+
+</body>
+
+</html>
